@@ -145,7 +145,7 @@ def reward_function(params):
         elif speed > 2:
             reward_speed = 0.9
         else:
-            reward_speed = 0.9
+            reward_speed = 0.7
   
   
 
@@ -191,7 +191,7 @@ def reward_function(params):
 
 
     # Calculate reward by putting different weights
-    reward += 1.0 * reward_lane + 1.0 * reward_direction + 1.0 * reward_sterring + 1.0 * reward_speed + reward_optimize
+    reward += 1.0 * reward_lane + 1.0 * reward_direction + 1.0 * reward_sterring + 4.0 * reward_speed + reward_optimize
    
  
     return float(reward)
